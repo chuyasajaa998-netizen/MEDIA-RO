@@ -4461,7 +4461,12 @@
                 document.getElementById('adventure-region-image').style.height = '';
             }
             
-            document.getElementById('adventure-instrument-name').innerText = `${instrument.icon} ${instrument.name}`;
+            // Display instrument name without icon for Sasando
+            if (instrument.name === 'Sasando') {
+                document.getElementById('adventure-instrument-name').innerText = instrument.name;
+            } else {
+                document.getElementById('adventure-instrument-name').innerText = `${instrument.icon} ${instrument.name}`;
+            }
             document.getElementById('adventure-instrument-image').src = instrument.image || 'https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/2316af59054f31128ec8fb930243ec71875b4051/Hijau%20dan%20Biru%20Warna-warni%20Lucu%20Ilustrasi%20Alam%20Doa%20Masuk%20Rumah%20A4%20Dokumen%20(Logo).png';
             document.getElementById('adventure-instrument-image').alt = `Alat Musik ${instrument.name}`;
             
