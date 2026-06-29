@@ -1879,6 +1879,12 @@
             flex: 0 0 auto;
             display: block;
         }
+        #adventure-region-image {
+            width: 120px;
+            height: 72px;
+            object-fit: cover;
+        }
+        }
 
         .info-value {
             font-size: clamp(13px, 1.3vw, 16px);
@@ -3631,7 +3637,7 @@
             { name: "Jambi", side: "corner", music: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/60b23abeec6e5cd05f39202907e15ddee5aa200d/musik%20gendang%20melayu%20-%20jambi.mp3", image: "https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/97f64b824060ad5de91364c00c041a9c748660bd/contoh%20(4).png" },
             { name: "Sumatera Barat", side: "side-left", music: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/60b23abeec6e5cd05f39202907e15ddee5aa200d/musik%20talempong%20-%20sumbar.mp3", image: "https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/97f64b824060ad5de91364c00c041a9c748660bd/contoh%20(4).png" },
             { name: "Sumatera Selatan", side: "side-left", music: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/ffd4212e9950f22c909197f53182871c4d61eb1c/musik%20talempong%20-%20sumbar.mp3", image: "https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/97f64b824060ad5de91364c00c041a9c748660bd/contoh%20(4).png" },
-            { name: "Bali", side: "side-left", music: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/ffd4212e9950f22c909197f53182871c4d61eb1c/musik%20gong%20luang%20-%20bali.mp3", image: "https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/97f64b824060ad5de91364c00c041a9c748660bd/contoh%20(4).png" },
+            { name: "Bali", side: "side-left", music: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/ffd4212e9950f22c909197f53182871c4d61eb1c/musik%20gong%20luang%20-%20bali.mp3", image: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/7a242c63ba039b7268e4acc160b72dd06b067251/PETA%20BALI.jpeg" },
             { name: "Jawa Barat", side: "side-top", music: "https://raw.githubusercontent.com/chuyasajaa998-netizen/MEDIA-RO/ffd4212e9950f22c909197f53182871c4d61eb1c/musik%20angklung%20-%20jabar.mp3", image: "https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/97f64b824060ad5de91364c00c041a9c748660bd/contoh%20(4).png" },
         ];
 
@@ -4454,15 +4460,6 @@
             document.getElementById('adventure-region-name').innerText = region.name;
             document.getElementById('adventure-region-image').src = region.image || DEFAULT_PREVIEW_IMAGE;
             document.getElementById('adventure-region-image').alt = `Wilayah ${region.name}`;
-            
-            // Adjust image size for Nusa Tenggara Timur
-            if (region.name === 'Nusa Tenggara Timur') {
-                document.getElementById('adventure-region-image').style.width = '140px';
-                document.getElementById('adventure-region-image').style.height = '84px';
-            } else {
-                document.getElementById('adventure-region-image').style.width = '';
-                document.getElementById('adventure-region-image').style.height = '';
-            }
             
             document.getElementById('adventure-instrument-name').innerText = `${instrument.icon} ${instrument.name}`;
             document.getElementById('adventure-instrument-image').src = instrument.image || 'https://raw.githubusercontent.com/lesmanaalit85-oss/resonance-odyssey/2316af59054f31128ec8fb930243ec71875b4051/Hijau%20dan%20Biru%20Warna-warni%20Lucu%20Ilustrasi%20Alam%20Doa%20Masuk%20Rumah%20A4%20Dokumen%20(Logo).png';
